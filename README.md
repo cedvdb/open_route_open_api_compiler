@@ -8,7 +8,11 @@ Server agnostic route handler to open api compiler.
 
 # How does this work ?
 
-The compiler analyze your code to generate an open api path object:
+This package is built on top of `open_route` which provides a server agnostic way of writing 
+route handlers. The compiler will find code that implement the open route `Route` interface 
+and create an open_api document.
+
+The compiler analyze your code:
 
   - It looks at the comments tags to find @summary, @description, @cosumes, @produces
   - It looks into your request interface to understand the shape of the body and query
