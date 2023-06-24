@@ -17,7 +17,7 @@ This isn't on npm but the dist folder is here on github so you can install by ad
 
 # How does this work ?
 
-This package is built on top of `open_route` which provides a server agnostic way of writing 
+This package is built on top of `typescript compiler api` and `open_route` which provides a server agnostic way of writing 
 route handlers. The compiler will find code that implement the open route `Route` interface 
 and create an open_api document.
 
