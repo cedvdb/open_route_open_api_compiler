@@ -23,8 +23,11 @@ const request_extractor_1 = require("./route_parsers/request_extractor");
  * @returns an open api document
  */
 function compileOpenApiDocument(mainFilepaths, tsconfig, baseDocument = { info: { title: 'App', version: '0.0.1' }, }) {
+    console.log(`starting compilation for ${JSON.stringify(mainFilepaths)}`);
     const paths = compileOpenApiPaths(mainFilepaths, tsconfig);
-    return (0, deepmerge_1.default)({ ...baseDocument, openapi: '3.0.0' }, { paths });
+    const result = (0, deepmerge_1.default)({ ...baseDocument, openapi: '3.0.0' }, { paths });
+    console.log(result);
+    return result;
 }
 exports.compileOpenApiDocument = compileOpenApiDocument;
 function compileOpenApiPaths(mainFilepaths, tsconfig) {

@@ -28,8 +28,11 @@ export function compileOpenApiDocument(
   tsconfig?: string,
   baseDocument: OpenApiBaseDocument = { info: { title: 'App', version: '0.0.1' }, },
 ): OpenAPIObject {
+  console.log(`starting compilation for ${JSON.stringify(mainFilepaths)}`);
   const paths = compileOpenApiPaths(mainFilepaths, tsconfig);
-  return deepMerge({ ...baseDocument, openapi: '3.0.0' }, { paths });
+  const result = deepMerge({ ...baseDocument, openapi: '3.0.0' }, { paths });
+  console.log(result);
+  return result;
 }
 
 
