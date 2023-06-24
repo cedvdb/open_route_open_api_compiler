@@ -18,7 +18,6 @@ export interface CreateAccountResponseBody {
   id: string;
 }
 
-
 /**
  * @summary Create an account
  */
