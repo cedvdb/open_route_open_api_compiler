@@ -6,6 +6,15 @@ Server agnostic route handler to open api compiler.
 ![Screenshot1](screenshot_1.png)
 
 
+# Installation
+
+This isn't on npm but the dist folder is here on github so you can install by adding the following to your npm module:
+
+```
+    "open_route": "0.0.4"
+    "open_route_open_api_compiler": "git@github.com:cedvdb/open_route_open_api_compiler.git",
+```
+
 # How does this work ?
 
 This package is built on top of `open_route` which provides a server agnostic way of writing 
